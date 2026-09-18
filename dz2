@@ -1,0 +1,23 @@
+def missing_products(ordered: list[str], in_stock: list[str]) -> set[str]:
+    """
+    Возвращает множество товаров из заказа, которых нет на складе
+    (разность ordered - in_stock).
+    """
+    return set(ordered) - set(in_stock)
+
+ordered = [
+    "ноутбук",
+    "мышь",
+    "клавиатура",
+    "монитор",
+    "наушники"]
+
+in_stock = [
+    "мышь",
+    "клавиатура",
+    "флешка",
+    "наушники"]
+
+result = missing_products(ordered, in_stock)
+print(result)
+# {'ноутбук', 'монитор'}
